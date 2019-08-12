@@ -1,4 +1,6 @@
 class PhonenumbersController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     phonenumber = Phonenumber.new(phonenumber_params)
     
